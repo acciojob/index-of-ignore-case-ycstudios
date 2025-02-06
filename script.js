@@ -1,5 +1,13 @@
-function indexOfIgnoreCase(s1, s2) {
-return str.toLowerCase().indexOf(subStr.toLowerCase());}
+function indexOfIgnoreCase(str, subStr) {
+    // Handle edge cases
+    if (!str || !subStr) return -1;
+    if (subStr.length > str.length) return -1;
+    if (subStr === '') return 0;
+
+    // Convert both strings to lowercase
+    return str.toLowerCase().indexOf(subStr.toLowerCase());
+}
+
 
 // Please do not change the code below
 const s1 = prompt("Enter s1:");
